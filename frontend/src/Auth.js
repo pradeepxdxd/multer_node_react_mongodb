@@ -2,8 +2,6 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import { useState } from "react";
-import Home from "./Home";
-
 
 function Auth() {
   const [imgPath, setImgPath] = useState({});
@@ -37,7 +35,6 @@ function Auth() {
     }
 
     const resp = await axios.post("http://localhost:3456/login", formData);
-    
     if(resp.status === 200){
         localStorage.setItem("id", resp.data.user._id)
       alert("Login Successfully");

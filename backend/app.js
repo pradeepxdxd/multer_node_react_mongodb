@@ -103,7 +103,7 @@ app.post("/login", async (req, res) => {
             else{
                 res.status(203).send({
                     statusCode : 203,
-                    msg : "user logged in successfully"
+                    msg : "invalid email and password"
                 })
             }
         }
